@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:wght@300;400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  --color-sky: #e8f7f5;
+  --color-teal: #0a9b8c;
+  --color-deep: #024d46;
+  --color-gold: #c8a951;
+  --color-soft: #f4fbfa;
+  --color-germ-green: #7ec850;
+  --color-germ-red: #e84545;
+  --color-germ-purple: #a459d4;
+  --color-kill-flash: #fff176;
+}
+
+@layer base {
+  body {
+    @apply bg-sky text-deep font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Background Texture - Updated to Bold Typography Dot Pattern */
+.bg-texture {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(#0a9b8c 0.5px, transparent 0.5px);
+  background-size: 32px 32px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.typography-showcase {
+  border-top: 1px solid rgba(10, 155, 140, 0.2);
+  padding-top: 24px;
+}
+
+.type-label {
+  @apply text-[11px] uppercase tracking-[0.1em] mb-3 text-teal font-bold;
+}
